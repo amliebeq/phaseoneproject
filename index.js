@@ -16,7 +16,15 @@ const importantLink = document.getElementById("importantlink")
 let openCpiWindow = () => {
     window.open('https://en.wikipedia.org/wiki/Consumer_price_index', '_blank')  
 }
+let changeCpiIn = () => {
+    cpiLink.innerHTML = 'Do you want to know more about CPI?'
+}
+let changeCpiOut = () => {
+    cpiLink.innerHTML = 'What is CPI?'
+}
 cpiLink.addEventListener('click', openCpiWindow)
+cpiLink.addEventListener('mouseover', changeCpiIn)
+cpiLink.addEventListener('mouseout', changeCpiOut)
 let openImportanceWindow = () => {
     window.open('https://www.bls.gov/cpi/questions-and-answers.htm#:~:text=As%20a%20means%20of%20adjusting,to%20millions%20of%20American%20workers.', '_blank')
 }
