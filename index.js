@@ -23,6 +23,10 @@ let openImportanceWindow = () => {
 let changeInfoIn = () => {
     importantLink.innerHTML = 'Click here for some frequently asked questions about CPI'
 }
+let changeInfoOut = () => {
+    importantLink.innerHTML = 'Why is it important?'
+}
 importantLink.addEventListener('click', openImportanceWindow)
-// importantLink.addEventListener('mouseover', changeInfoIn)
+importantLink.addEventListener('mouseover', changeInfoIn)
+importantLink.addEventListener('mouseout', changeInfoOut)
 
