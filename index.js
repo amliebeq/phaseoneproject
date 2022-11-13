@@ -11,8 +11,8 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
         })
         console.log(table)
     })
+
 const cpiLink = document.getElementById("cpilink")
-const importantLink = document.getElementById("importantlink")
 let openCpiWindow = () => {
     window.open('https://en.wikipedia.org/wiki/Consumer_price_index', '_blank')  
 }
@@ -25,6 +25,8 @@ let changeCpiOut = () => {
 cpiLink.addEventListener('click', openCpiWindow)
 cpiLink.addEventListener('mouseover', changeCpiIn)
 cpiLink.addEventListener('mouseout', changeCpiOut)
+
+const importantLink = document.getElementById("importantlink")
 let openImportanceWindow = () => {
     window.open('https://www.bls.gov/cpi/questions-and-answers.htm#:~:text=As%20a%20means%20of%20adjusting,to%20millions%20of%20American%20workers.', '_blank')
 }
@@ -38,3 +40,17 @@ importantLink.addEventListener('click', openImportanceWindow)
 importantLink.addEventListener('mouseover', changeInfoIn)
 importantLink.addEventListener('mouseout', changeInfoOut)
 
+let graphTextLink = document.getElementById('graph')
+let graphImageLink = document.getElementById('cpiimage')
+let openGraph = () => {
+    window.open('https://www.econdb.com/chart/f4a4/', '_blank')
+}
+let changeGraphInfoIn = () => {
+    graphTextLink.innerHTML = 'Click on the graph image for a link to an interactive graph'
+}
+let changeGraphInfoOut = () => {
+    graphTextLink.innerHTML = 'Graph of CPI data'
+}
+graphImageLink.addEventListener('click', openGraph)
+graphTextLink.addEventListener('mouseover', changeGraphInfoIn)
+graphTextLink.addEventListener('mouseout', changeGraphInfoOut)

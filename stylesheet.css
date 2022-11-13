@@ -7,10 +7,31 @@ table, th, td {
 h1 {
     text-align: center;
 }
-h3:hover {
+
+#cpilink:hover {
     cursor: pointer;
 }
+
+#importantlink:hover {
+    cursor: pointer;
+}
+
+#graph {
+    color: black;
+}
+
 h3 {
     color: blue;
     text-decoration: underline;
+}
+
+#cpiimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
+
+#cpiimage:hover {
+    cursor: pointer;
 }
