@@ -1,3 +1,8 @@
+let htmlTable = document.getElementById('table')
+let htmlRow = document.getElementById('Head')
+let tr = document.createElement('tr')
+let td = document.createElement('td')
+let th = document.createElement('th')
 fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
     .then(function (response) {
         return response.json ()
@@ -5,12 +10,42 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
     .then(function (data) {
         let dates = Object.values(data.data.dates)
         let values = Object.values(data.data.values)
-        let table = [{}]
-        dates.forEach((element, i) => {
-            table[element] = values[i]
-        })
-        console.log(table)
-    })
+        let tableArray = []
+            dates.forEach((num1, index) => {
+            const num2 = values[index];
+            let total = [num1, num2]
+            tableArray.push(total)
+          });
+          console.log(tableArray)
+
+        function createTable(tableData) {
+            let table = document.createElement('table');
+            const tableHead = table.createTHead();
+            let headRow = tableHead.insertRow(0)
+            let headCell1 = headRow.insertCell(0)
+            let headCell2 = headRow.insertCell(1)
+            headCell1.innerHTML = 'Date'
+            headCell2.innerHTML = 'Value'
+            let tableBody = document.createElement('tbody');
+            tableData.forEach(function(rowData) {
+              let row = document.createElement('tr');
+          
+              rowData.forEach(function(cellData) {
+                let cell = document.createElement('td');
+                cell.appendChild(document.createTextNode(cellData));
+                row.appendChild(cell);
+              });
+          
+              tableBody.appendChild(row);
+            });
+            
+            table.appendChild(tableBody);
+            document.body.appendChild(table);
+          }
+          
+          createTable(tableArray);         
+})
+
 
 const cpiLink = document.getElementById("cpilink")
 let openCpiWindow = () => {
