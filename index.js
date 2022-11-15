@@ -22,10 +22,10 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
             let table = document.createElement('table');
             const tableHead = table.createTHead();
             let headRow = tableHead.insertRow(0)
-            let headCell1 = headRow.insertCell(0)
-            let headCell2 = headRow.insertCell(1)
-            headCell1.innerHTML = 'Date'
-            headCell2.innerHTML = 'Value'
+            // let headCell1 = headRow.insertCell(0)
+            // let headCell2 = headRow.insertCell(1)
+            // headCell1.innerHTML = 'Date'
+            // headCell2.innerHTML = 'Value'
             let tableBody = document.createElement('tbody');
             tableData.forEach(function(rowData) {
               let row = document.createElement('tr');
@@ -46,6 +46,29 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
           createTable(tableArray);         
 })
 
+function searchTable() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    table = document.getElementsByTagName("table") ;
+    tr = document.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+
+searchTable()
 
 const cpiLink = document.getElementById("cpilink")
 let openCpiWindow = () => {
