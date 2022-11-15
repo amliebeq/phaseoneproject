@@ -112,3 +112,13 @@ let changeGraphInfoOut = () => {
 graphImageLink.addEventListener('click', openGraph)
 graphTextLink.addEventListener('mouseover', changeGraphInfoIn)
 graphTextLink.addEventListener('mouseout', changeGraphInfoOut)
+
+const tableHeader = document.getElementById("chart")
+let changeHeadInfoIn = () => {
+    tableHeader.innerHTML = 'Use the bar below to filter the table'
+}
+let changeHeadInfoOut = () => {
+    tableHeader.innerHTML = 'Table of CPI Data'
+}
+tableHeader.addEventListener('mouseover', changeHeadInfoIn)
+tableHeader.addEventListener('mouseout', changeHeadInfoOut)
