@@ -22,10 +22,10 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
             let table = document.createElement('table');
             const tableHead = table.createTHead();
             let headRow = tableHead.insertRow(0)
-            // let headCell1 = headRow.insertCell(0)
-            // let headCell2 = headRow.insertCell(1)
-            // headCell1.innerHTML = 'Date'
-            // headCell2.innerHTML = 'Value'
+            let headCell1 = headRow.insertCell(0)
+            let headCell2 = headRow.insertCell(1)
+            headCell1.innerHTML = 'Date'
+            headCell2.innerHTML = 'Value'
             let tableBody = document.createElement('tbody');
             tableData.forEach(function(rowData) {
               let row = document.createElement('tr');
