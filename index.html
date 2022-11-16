@@ -2,22 +2,24 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>   
 <body>
-    <h1>US CPI information from 1947 to current</h1>
-    <div>
-        <h3 id="cpilink", title="https://en.wikipedia.org/wiki/Consumer_price_index">What is CPI?</h3>
-        <p>The Consumer Price Index measures the overall change in consumer prices based on a representative basket of goods and services over time.</p>
+    <div id="bodydiv">
+        <h1>US CPI information from 1947 to current</h1>
+        <div>
+            <h3 id="cpilink", title="https://en.wikipedia.org/wiki/Consumer_price_index">What is CPI?</h3>
+            <p>The Consumer Price Index measures the overall change in consumer prices based on a representative basket of goods and services over time.</p>
+        </div>
+        <div>    
+            <h3 id="importantlink", title="https://www.bls.gov/cpi/questions-and-answers.htm#:~:text=As%20a%20means%20of%20adjusting,to%20millions%20of%20American%20workers.">Why is it important?</h3>
+            <p>The CPI is often used to adjust consumers' income payments (for example, Social Security), to adjust income eligibility levels for government assistance, and to automatically provide cost-of-living wage adjustments to millions of American workers</p>
+        </div>
+        <div>
+            <h3 id="graph">Graph of CPI data</h3>
+            <img src="CPIUS (2).png", id="cpiimage", title="https://www.econdb.com/chart/1dcd">
+        </div>
+        <div>
+            <h3 id="chart">Table of CPI Data</h3>
+        <div id="searchbar">
+            <input type="text" id="search" onkeyup="searchTable()" placeholder="Search....." >
+        <script src="index.js"></script>
     </div>
-    <div>    
-        <h3 id="importantlink", title="https://www.bls.gov/cpi/questions-and-answers.htm#:~:text=As%20a%20means%20of%20adjusting,to%20millions%20of%20American%20workers.">Why is it important?</h3>
-        <p>The CPI is often used to adjust consumers' income payments (for example, Social Security), to adjust income eligibility levels for government assistance, and to automatically provide cost-of-living wage adjustments to millions of American workers</p>
-    </div>
-    <div>
-        <h3 id="graph">Graph of CPI data</h3>
-        <img src="CPIUS (2).png", id="cpiimage", title="https://www.econdb.com/chart/1dcd">
-    </div>
-    <div>
-        <h3 id="chart">Table of CPI Data</h3>
-    <div id="searchbar">
-        <input type="text" id="search" onkeyup="searchTable()" placeholder="Search....." >
-    <script src="index.js"></script>
 </body>
