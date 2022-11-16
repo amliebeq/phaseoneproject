@@ -86,7 +86,7 @@ h1 {
 }
 
 tr:nth-child(even) {
-    background-color: lightgray;
+    background-color: lightgreen;
 }
 
 tr:nth-child(even):hover {
