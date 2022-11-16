@@ -73,6 +73,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 50%; 
+    box-shadow:  0 0 10px 0px rgba(0,0,0,0.6);
 }
 
 #cpiimage:hover {
@@ -100,6 +101,6 @@ html, body {
   }
 
 body {
-background-color: lightgray;
+background-color: #CBC3E3;
 text-align: center;
 }
