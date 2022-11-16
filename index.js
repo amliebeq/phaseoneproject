@@ -115,7 +115,7 @@ graphTextLink.addEventListener('mouseout', changeGraphInfoOut)
 
 const tableHeader = document.getElementById("chart")
 let changeHeadInfoIn = () => {
-    tableHeader.innerHTML = 'Use the bar below to filter the table'
+    tableHeader.innerHTML = 'Use the search bar below to filter the table'
 }
 let changeHeadInfoOut = () => {
     tableHeader.innerHTML = 'Table of CPI Data'
