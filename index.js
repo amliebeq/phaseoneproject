@@ -122,3 +122,11 @@ let changeHeadInfoOut = () => {
 }
 tableHeader.addEventListener('mouseover', changeHeadInfoIn)
 tableHeader.addEventListener('mouseout', changeHeadInfoOut)
+
+let supriseImage = document.getElementById('supriseimage')
+let picPop = () => {
+    supriseImage.hidden = false
+}
+let suprise = document.getElementById('suprise')
+supriseImage.hidden = true
+suprise.addEventListener('click', picPop)
