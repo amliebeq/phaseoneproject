@@ -126,6 +126,9 @@ tableHeader.addEventListener('mouseout', changeHeadInfoOut)
 let supriseImage = document.getElementById('supriseimage')
 let picPop = () => {
     supriseImage.hidden = false
+    setTimeout(function() {
+        supriseImage.hidden = true, 2000
+    },2000)
 }
 let suprise = document.getElementById('suprise')
 supriseImage.hidden = true
