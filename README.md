@@ -32,3 +32,7 @@ Commits:
 27 made folder for images and added a timer
 28 added image styling
 29 updated readme
+30 added comments to js
+31 resized picture
+32 changed inner text for search
+33 updated readme
