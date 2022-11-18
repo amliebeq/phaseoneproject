@@ -1,3 +1,9 @@
+//create the table
+    //define the elements we will need to create
+    //fetch the data from the api
+    //create the array of arrays
+    //send the info into the table
+
 let htmlTable = document.getElementById('table')
 let htmlRow = document.getElementById('Head')
 let tr = document.createElement('tr')
@@ -16,7 +22,6 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
             let total = [num1, num2]
             tableArray.push(total)
           });
-          console.log(tableArray)
 
         function createTable(tableData) {
             let table = document.createElement('table');
@@ -45,7 +50,9 @@ fetch('https://www.econdb.com/api/series/CPIUS/?format=json')
           
           createTable(tableArray);         
 })
-
+//create the search
+    //added the search bar into html fil
+    //create the filter function
 function searchTable() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("search");
@@ -70,6 +77,10 @@ function searchTable() {
 
 searchTable()
 
+//add links to the section titles and add mouseover events
+    //add click event listeners that link to outside sources
+    //add mouseovers to give instructions
+    //use mouseout to revert
 const cpiLink = document.getElementById("cpilink")
 let openCpiWindow = () => {
     window.open('https://en.wikipedia.org/wiki/Consumer_price_index', '_blank')  
@@ -123,6 +134,7 @@ let changeHeadInfoOut = () => {
 tableHeader.addEventListener('mouseover', changeHeadInfoIn)
 tableHeader.addEventListener('mouseout', changeHeadInfoOut)
 
+//add a fun suprise into the page
 let supriseImage = document.getElementById('supriseimage')
 let picPop = () => {
     supriseImage.hidden = false
